@@ -1,22 +1,22 @@
-/* Variables CSS */
+/* Variables CSS - Temática San Valentín */
 :root {
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #818cf8;
-    --secondary-color: #0f172a;
-    --accent-color: #06b6d4;
+    --primary-color: #e11d48;
+    --primary-dark: #be123c;
+    --primary-light: #fb7185;
+    --secondary-color: #831843;
+    --accent-color: #f472b6;
     --success-color: #10b981;
     --danger-color: #ef4444;
     --warning-color: #f59e0b;
-    --background-color: #fafafa;
-    --background-dark: #0f172a;
+    --background-color: #fff1f2;
+    --background-dark: #831843;
     --card-background: #ffffff;
     --text-primary: #1e293b;
     --text-secondary: #64748b;
     --text-light: #94a3b8;
-    --border-color: #e2e8f0;
-    --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
-    --gradient-2: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --border-color: #fecdd3;
+    --gradient-1: linear-gradient(135deg, #e11d48 0%, #f472b6 50%, #fb7185 100%);
+    --gradient-2: linear-gradient(135deg, #831843 0%, #9f1239 100%);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -160,12 +160,12 @@ body {
 .btn-primary {
     background: var(--gradient-1);
     color: white;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 15px rgba(225, 29, 72, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 6px 20px rgba(225, 29, 72, 0.5);
 }
 
 .btn-outline {
@@ -380,6 +380,341 @@ body {
     opacity: 0.8;
 }
 
+/* Valentine Badge */
+.valentine-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #fecdd3, #fff1f2);
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Floating Hearts */
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 2rem;
+    animation: floatHeart 15s linear infinite;
+    opacity: 0.6;
+}
+
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 30%; animation-delay: 3s; }
+.heart:nth-child(3) { left: 50%; animation-delay: 6s; }
+.heart:nth-child(4) { left: 70%; animation-delay: 9s; }
+.heart:nth-child(5) { left: 90%; animation-delay: 12s; }
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Countdown Section */
+.countdown-section {
+    background: linear-gradient(135deg, #831843 0%, #9f1239 50%, #e11d48 100%);
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.countdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.countdown-hearts {
+    display: flex;
+    gap: 20px;
+    font-size: 2rem;
+    animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.15); }
+}
+
+.countdown-content {
+    text-align: center;
+}
+
+.countdown-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: white;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.heart-icon {
+    animation: heartPulse 1s infinite;
+}
+
+@keyframes heartPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+.countdown-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.countdown-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius);
+    padding: 20px 25px;
+    min-width: 90px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+}
+
+.countdown-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+.countdown-number {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-label {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+.countdown-separator {
+    font-size: 1.5rem;
+    animation: heartPulse 1s infinite;
+}
+
+.countdown-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #fbbf24;
+    font-weight: 600;
+}
+
+.countdown-promo {
+    width: 100%;
+    max-width: 500px;
+}
+
+.promo-highlight {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--radius);
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: glowPulse 2s infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); }
+    50% { box-shadow: 0 10px 40px rgba(225, 29, 72, 0.4), 0 0 20px rgba(225, 29, 72, 0.2); }
+}
+
+.promo-icon {
+    font-size: 2.5rem;
+    animation: bounce2 2s infinite;
+}
+
+@keyframes bounce2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.promo-text {
+    flex: 1;
+}
+
+.promo-text strong {
+    display: block;
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.promo-text span {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.countdown-hearts-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.1;
+    font-size: 4rem;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.countdown-hearts-bg span {
+    animation: floatSlow 10s ease-in-out infinite;
+}
+
+.countdown-hearts-bg span:nth-child(odd) {
+    animation-delay: -5s;
+}
+
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+/* Valentine Banner */
+.valentine-banner {
+    position: relative;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.2), transparent 60%), var(--gradient-1);
+    padding: 60px 0;
+    overflow: hidden;
+    color: white;
+}
+
+.valentine-banner__glow {
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    pointer-events: none;
+}
+
+.valentine-banner__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.banner-text {
+    max-width: 600px;
+}
+
+.banner-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.banner-text h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 15px;
+}
+
+.banner-text p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.banner-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.banner-note {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.banner-hearts {
+    display: flex;
+    gap: 20px;
+    font-size: 2.8rem;
+    animation: heartDrift 6s ease-in-out infinite;
+}
+
+.banner-hearts span {
+    animation: heartPulse 1.8s infinite;
+}
+
+.banner-hearts span:nth-child(2) { animation-delay: -0.4s; }
+.banner-hearts span:nth-child(3) { animation-delay: -0.8s; }
+.banner-hearts span:nth-child(4) { animation-delay: -1.2s; }
+.banner-hearts span:nth-child(5) { animation-delay: -1.6s; }
+
+@keyframes heartDrift {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
@@ -498,6 +833,41 @@ body {
     line-height: 1.7;
 }
 
+/* Promo Cards - San Valentín */
+.promo-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.promo-card .servicio-icon {
+    margin: 0 auto 24px;
+}
+
+.promo-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    animation: pulse 2s infinite;
+}
+
+.promo-price {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #fecdd3, #fff1f2);
+    color: var(--primary-dark);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
 /* Nosotros */
 .nosotros {
     background: white;
@@ -539,16 +909,15 @@ body {
 }
 
 .feature-icon {
-    width: 28px;
-    height: 28px;
-    background: var(--success-color);
-    color: white;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #fecdd3, #fff1f2);
+    color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
 }
 
 .nosotros-image {
@@ -579,15 +948,15 @@ body {
 
 .image-item-1 {
     grid-row: span 2;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #e11d48, #be123c);
 }
 
 .image-item-2 {
-    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    background: linear-gradient(135deg, #f472b6, #ec4899);
 }
 
 .image-item-3 {
-    background: linear-gradient(135deg, #f472b6, #ec4899);
+    background: linear-gradient(135deg, #fb7185, #fda4af);
 }
 
 /* Testimonios */
@@ -907,6 +1276,15 @@ body {
 
 /* Responsive */
 @media (max-width: 1024px) {
+    .valentine-banner__content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-hearts {
+        justify-content: center;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -957,6 +1335,19 @@ body {
 }
 
 @media (max-width: 768px) {
+    .valentine-banner {
+        padding: 45px 0;
+    }
+
+    .valentine-banner__content {
+        gap: 30px;
+    }
+
+    .banner-hearts {
+        font-size: 2.2rem;
+        flex-wrap: wrap;
+    }
+
     .nav {
         display: none;
         position: absolute;
@@ -987,6 +1378,42 @@ body {
 
     .menu-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Countdown responsive */
+    .countdown-section {
+        padding: 30px 0;
+    }
+
+    .countdown-title {
+        font-size: 1.3rem;
+    }
+
+    .countdown-timer {
+        gap: 10px;
+    }
+
+    .countdown-item {
+        padding: 15px 18px;
+        min-width: 70px;
+    }
+
+    .countdown-number {
+        font-size: 2rem;
+    }
+
+    .countdown-separator {
+        font-size: 1rem;
+    }
+
+    .promo-highlight {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    .countdown-hearts-bg {
+        font-size: 2rem;
     }
 
     .hero-title {

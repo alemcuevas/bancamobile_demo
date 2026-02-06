@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BancaMobile - Tu banco digital de confianza</title>
+    <title>BancaMobile - Especial San Valentín 💕</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -28,21 +28,111 @@
         </div>
     </header>
 
+    <!-- Countdown Banner -->
+    <section class="countdown-section" id="countdown-section">
+        <div class="container">
+            <div class="countdown-wrapper">
+                <div class="countdown-hearts">
+                    <span class="countdown-heart">💕</span>
+                    <span class="countdown-heart">💖</span>
+                    <span class="countdown-heart">💝</span>
+                </div>
+                <div class="countdown-content">
+                    <h2 class="countdown-title">
+                        <span class="heart-icon">❤️</span>
+                        San Valentín está cerca
+                        <span class="heart-icon">❤️</span>
+                    </h2>
+                    <p class="countdown-subtitle">¡No te pierdas nuestras promociones exclusivas!</p>
+                    <div class="countdown-timer" id="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">Días</span>
+                        </div>
+                        <div class="countdown-separator">💗</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Horas</span>
+                        </div>
+                        <div class="countdown-separator">💗</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Minutos</span>
+                        </div>
+                        <div class="countdown-separator">💗</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Segundos</span>
+                        </div>
+                    </div>
+                    <div class="countdown-message" id="countdown-message"></div>
+                </div>
+                <div class="countdown-promo">
+                    <div class="promo-highlight">
+                        <span class="promo-icon">🎁</span>
+                        <div class="promo-text">
+                            <strong>Promo del día:</strong>
+                            <span id="daily-promo">Cargando...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="countdown-hearts-bg">
+            <span>💕</span><span>❤️</span><span>💖</span><span>💗</span><span>💝</span>
+            <span>💕</span><span>❤️</span><span>💖</span><span>💗</span><span>💝</span>
+        </div>
+    </section>
+
+    <!-- Banner San Valentín -->
+    <section class="valentine-banner">
+        <div class="valentine-banner__glow"></div>
+        <div class="container valentine-banner__content">
+            <div class="banner-text">
+                <span class="banner-label">💞 Especial 14 de febrero</span>
+                <h2>Comparte amor, puntos y sonrisas</h2>
+                <p>
+                    Usa tu tarjeta BancaMobile y recibe puntos dobles en restaurantes, flores, viajes y experiencias para compartir.
+                    Entre más amor repartas, más recompensas recibes.
+                </p>
+                <div class="banner-actions">
+                    <a href="#servicios" class="btn btn-primary">Ver promociones</a>
+                    <span class="banner-note">Válido del 1 al 14 de febrero</span>
+                </div>
+            </div>
+            <div class="banner-hearts">
+                <span>💘</span>
+                <span>💖</span>
+                <span>💞</span>
+                <span>💗</span>
+                <span>💕</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-bg">
             <div class="hero-shape hero-shape-1"></div>
             <div class="hero-shape hero-shape-2"></div>
             <div class="hero-shape hero-shape-3"></div>
+            <div class="floating-hearts">
+                <span class="heart">💕</span>
+                <span class="heart">❤️</span>
+                <span class="heart">💖</span>
+                <span class="heart">💗</span>
+                <span class="heart">💝</span>
+            </div>
         </div>
         <div class="container hero-content">
             <div class="hero-text">
+                <span class="valentine-badge">🌹 Especial San Valentín 🌹</span>
                 <h1 class="hero-title">
-                    Tu dinero, <span class="gradient-text">sin límites</span>
+                    El amor merece <span class="gradient-text">lo mejor</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Banca digital moderna, segura y sin complicaciones. 
-                    Gestiona tus finanzas desde cualquier lugar, en cualquier momento.
+                    Este 14 de febrero, sorprende a quien más quieres. 
+                    Aprovecha nuestras promociones exclusivas y haz de este día algo inolvidable.
                 </p>
                 <div class="hero-buttons">
                     <a href="#servicios" class="btn btn-primary">Explorar Servicios</a>
@@ -89,74 +179,84 @@
         </div>
     </section>
 
-    <!-- Servicios Section -->
+    <!-- Promociones San Valentín Section -->
     <section id="servicios" class="section servicios">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Nuestros Servicios</span>
-                <h2 class="section-title">Todo lo que necesitas en un solo lugar</h2>
-                <p class="section-subtitle">Soluciones financieras diseñadas para simplificar tu vida</p>
+                <span class="section-tag">💝 Promociones San Valentín 💝</span>
+                <h2 class="section-title">Celebra el amor con ofertas exclusivas</h2>
+                <p class="section-subtitle">Aprovecha estas promociones especiales solo del 1 al 14 de febrero</p>
             </div>
             <div class="servicios-grid">
-                <div class="servicio-card" data-aos="fade-up">
+                <div class="servicio-card promo-card" data-aos="fade-up">
+                    <div class="promo-badge">-50%</div>
                     <div class="servicio-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="5" width="20" height="14" rx="2"/>
-                            <line x1="2" y1="10" x2="22" y2="10"/>
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                         </svg>
                     </div>
-                    <h3>Tarjetas sin comisiones</h3>
-                    <p>Tarjetas de débito y crédito sin cuotas anuales ni comisiones ocultas.</p>
+                    <h3>Cena Romántica</h3>
+                    <p>50% de descuento en restaurantes selectos pagando con tu tarjeta BancaMobile.</p>
+                    <span class="promo-price">Hasta $500 de descuento</span>
                 </div>
-                <div class="servicio-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="servicio-card promo-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="promo-badge">2x1</div>
+                    <div class="servicio-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                        </svg>
+                    </div>
+                    <h3>Viaje en Pareja</h3>
+                    <p>2x1 en vuelos nacionales y 30% en hoteles al reservar con tu tarjeta de crédito.</p>
+                    <span class="promo-price">MSI disponibles</span>
+                </div>
+                <div class="servicio-card promo-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="promo-badge">GRATIS</div>
+                    <div class="servicio-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                    </div>
+                    <h3>Flores + Regalo</h3>
+                    <p>Envío gratis en floristerías y tiendas de regalos asociadas este 14 de febrero.</p>
+                    <span class="promo-price">Sin mínimo de compra</span>
+                </div>
+                <div class="servicio-card promo-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="promo-badge">15%</div>
+                    <div class="servicio-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Joyería y Relojes</h3>
+                    <p>15% de bonificación en joyerías participantes con tu tarjeta BancaMobile.</p>
+                    <span class="promo-price">+ 6 MSI</span>
+                </div>
+                <div class="servicio-card promo-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="promo-badge">$0</div>
                     <div class="servicio-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                         </svg>
                     </div>
-                    <h3>Transferencias instantáneas</h3>
-                    <p>Envía y recibe dinero al instante, las 24 horas del día, los 7 días de la semana.</p>
+                    <h3>Transferencias Gratis</h3>
+                    <p>Envía dinero sin comisión a tu pareja o seres queridos durante todo febrero.</p>
+                    <span class="promo-price">Ilimitadas</span>
                 </div>
-                <div class="servicio-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="servicio-card promo-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="promo-badge">20%</div>
                     <div class="servicio-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                            <circle cx="12" cy="13" r="4"/>
                         </svg>
                     </div>
-                    <h3>Seguridad avanzada</h3>
-                    <p>Protección con encriptación de última generación y autenticación biométrica.</p>
-                </div>
-                <div class="servicio-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="servicio-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 3v18h18"/>
-                            <path d="M18 17l-5-5-4 4-3-3"/>
-                        </svg>
-                    </div>
-                    <h3>Inversiones inteligentes</h3>
-                    <p>Haz crecer tu dinero con nuestras opciones de inversión personalizadas.</p>
-                </div>
-                <div class="servicio-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="servicio-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
-                        </svg>
-                    </div>
-                    <h3>Pagos programados</h3>
-                    <p>Automatiza tus pagos recurrentes y nunca olvides una fecha importante.</p>
-                </div>
-                <div class="servicio-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="servicio-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-                        </svg>
-                    </div>
-                    <h3>Soporte 24/7</h3>
-                    <p>Atención personalizada disponible cuando la necesites, sin esperas.</p>
+                    <h3>Spa & Bienestar</h3>
+                    <p>20% de descuento en spas y tratamientos de pareja en establecimientos selectos.</p>
+                    <span class="promo-price">Reserva ahora</span>
                 </div>
             </div>
         </div>
@@ -167,32 +267,32 @@
         <div class="container">
             <div class="nosotros-content">
                 <div class="nosotros-text">
-                    <span class="section-tag">Sobre Nosotros</span>
-                    <h2 class="section-title">Más que un banco, somos tu aliado financiero</h2>
+                    <span class="section-tag">💕 Celebra con Nosotros</span>
+                    <h2 class="section-title">Este San Valentín, el amor también se comparte</h2>
                     <p>
-                        En BancaMobile creemos que la banca debe ser simple, transparente y accesible para todos. 
-                        Desde 2002, hemos revolucionado la forma en que las personas manejan su dinero.
+                        En BancaMobile creemos que los mejores momentos se viven en compañía. 
+                        Por eso, este 14 de febrero queremos ser parte de tus celebraciones.
                     </p>
                     <p>
-                        Nuestro compromiso es brindarte herramientas innovadoras que te permitan alcanzar 
-                        tus metas financieras, sin importar dónde te encuentres.
+                        Ya sea una cena romántica, un viaje sorpresa o un regalo especial, 
+                        estamos aquí para hacer realidad esos momentos que recordarás siempre.
                     </p>
                     <div class="nosotros-features">
                         <div class="feature">
-                            <span class="feature-icon">✓</span>
-                            <span>Sin comisiones ocultas</span>
+                            <span class="feature-icon">💝</span>
+                            <span>Promociones exclusivas</span>
                         </div>
                         <div class="feature">
-                            <span class="feature-icon">✓</span>
-                            <span>100% digital</span>
+                            <span class="feature-icon">🌹</span>
+                            <span>Regalos sorpresa</span>
                         </div>
                         <div class="feature">
-                            <span class="feature-icon">✓</span>
-                            <span>Seguridad garantizada</span>
+                            <span class="feature-icon">✨</span>
+                            <span>Experiencias únicas</span>
                         </div>
                         <div class="feature">
-                            <span class="feature-icon">✓</span>
-                            <span>Atención personalizada</span>
+                            <span class="feature-icon">💳</span>
+                            <span>MSI en todo</span>
                         </div>
                     </div>
                 </div>
@@ -211,46 +311,46 @@
     <section class="section testimonios">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Testimonios</span>
-                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                <span class="section-tag">💕 Historias de Amor 💕</span>
+                <h2 class="section-title">Momentos especiales con BancaMobile</h2>
             </div>
             <div class="testimonios-slider" id="testimonios-slider">
                 <div class="testimonio-card active">
                     <div class="testimonio-content">
-                        <div class="testimonio-stars">★★★★★</div>
-                        <p>"BancaMobile cambió completamente mi forma de manejar mis finanzas. Todo es tan fácil e intuitivo."</p>
+                        <div class="testimonio-stars">💕💕💕💕💕</div>
+                        <p>"Gracias a la promo de viajes de BancaMobile, pude sorprender a mi esposa con un fin de semana en la playa. ¡Fue mágico!"</p>
                     </div>
                     <div class="testimonio-author">
-                        <div class="author-avatar">MG</div>
+                        <div class="author-avatar">RP</div>
                         <div class="author-info">
-                            <strong>María González</strong>
-                            <span>Empresaria</span>
+                            <strong>Roberto y Patricia</strong>
+                            <span>10 años juntos 💑</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonio-card">
                     <div class="testimonio-content">
-                        <div class="testimonio-stars">★★★★★</div>
-                        <p>"Las transferencias instantáneas me han salvado en muchas ocasiones. El soporte es excepcional."</p>
+                        <div class="testimonio-stars">💕💕💕💕💕</div>
+                        <p>"El descuento en joyería me ayudó a comprar el anillo perfecto. ¡Dijo que sí! Gracias BancaMobile."</p>
                     </div>
                     <div class="testimonio-author">
-                        <div class="author-avatar">CR</div>
+                        <div class="author-avatar">DM</div>
                         <div class="author-info">
-                            <strong>Carlos Rodríguez</strong>
-                            <span>Ingeniero</span>
+                            <strong>Daniel Mendoza</strong>
+                            <span>Recién comprometido 💍</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonio-card">
                     <div class="testimonio-content">
-                        <div class="testimonio-stars">★★★★★</div>
-                        <p>"Finalmente un banco que entiende las necesidades de los jóvenes. Sin comisiones absurdas."</p>
+                        <div class="testimonio-stars">💕💕💕💕💕</div>
+                        <p>"La cena romántica con 50% de descuento fue perfecta. Celebramos nuestro aniversario como nunca antes."</p>
                     </div>
                     <div class="testimonio-author">
-                        <div class="author-avatar">AL</div>
+                        <div class="author-avatar">LC</div>
                         <div class="author-info">
-                            <strong>Ana López</strong>
-                            <span>Diseñadora</span>
+                            <strong>Laura y Carlos</strong>
+                            <span>5 años de amor 💖</span>
                         </div>
                     </div>
                 </div>

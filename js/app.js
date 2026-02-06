@@ -1,3 +1,96 @@
+// ==========================================
+// COUNTDOWN SAN VALENTÍN
+// ==========================================
+
+// Promociones diarias del 1 al 14 de febrero
+const dailyPromos = {
+    1: "🍽️ 30% de descuento en restaurantes selectos",
+    2: "💎 15% en joyerías participantes + 6 MSI",
+    3: "✈️ 2x1 en vuelos nacionales",
+    4: "🌹 Envío GRATIS en flores y regalos",
+    5: "💆 25% en Spa y tratamientos de pareja",
+    6: "🏨 40% de descuento en hoteles románticos",
+    7: "🎬 2x1 en cines y entretenimiento",
+    8: "👗 20% en tiendas de moda selectas",
+    9: "🍫 Caja de chocolates GRATIS en compras +$500",
+    10: "📱 18 MSI en electrónicos",
+    11: "🍷 30% en vinos y licores premium",
+    12: "💐 50% en arreglos florales especiales",
+    13: "🎁 Regalo sorpresa en compras +$1,000",
+    14: "❤️ ¡TODAS las promociones activas! + 10% extra"
+};
+
+// Función para actualizar el countdown
+function updateCountdown() {
+    const valentinesDay = new Date('February 14, 2026 23:59:59').getTime();
+    const now = new Date().getTime();
+    const distance = valentinesDay - now;
+    
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+    const messageEl = document.getElementById('countdown-message');
+    
+    if (!daysEl) return;
+    
+    if (distance < 0) {
+        // San Valentín ya pasó o es hoy
+        daysEl.textContent = '00';
+        hoursEl.textContent = '00';
+        minutesEl.textContent = '00';
+        secondsEl.textContent = '00';
+        messageEl.innerHTML = '💕 ¡Feliz San Valentín! 💕 <br><small>Las promociones están activas todo el día</small>';
+        return;
+    }
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    daysEl.textContent = String(days).padStart(2, '0');
+    hoursEl.textContent = String(hours).padStart(2, '0');
+    minutesEl.textContent = String(minutes).padStart(2, '0');
+    secondsEl.textContent = String(seconds).padStart(2, '0');
+    
+    // Mensaje especial si falta poco
+    if (days === 0 && hours < 24) {
+        messageEl.innerHTML = '💝 ¡Último día para aprovechar! 💝';
+    } else if (days <= 3) {
+        messageEl.innerHTML = '⏰ ¡Quedan pocos días! No te lo pierdas';
+    }
+}
+
+// Función para mostrar la promo del día
+function updateDailyPromo() {
+    const promoEl = document.getElementById('daily-promo');
+    if (!promoEl) return;
+    
+    const today = new Date();
+    const day = today.getDate();
+    const month = today.getMonth() + 1; // Enero = 0
+    
+    // Solo mostrar promos del 1 al 14 de febrero
+    if (month === 2 && day >= 1 && day <= 14) {
+        promoEl.textContent = dailyPromos[day];
+    } else if (month === 2 && day > 14) {
+        promoEl.textContent = "¡Las promociones de San Valentín han terminado! Espera las próximas 💕";
+    } else {
+        // Si no es febrero, mostrar promo genérica o del día 14
+        promoEl.textContent = "🎉 ¡Próximamente! Promociones especiales de San Valentín";
+    }
+}
+
+// Iniciar countdown
+updateCountdown();
+updateDailyPromo();
+setInterval(updateCountdown, 1000);
+
+// ==========================================
+// HEADER Y NAVEGACIÓN
+// ==========================================
+
 // Header scroll effect
 const header = document.getElementById('header');
 let lastScroll = 0;
