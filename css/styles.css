@@ -1,3 +1,163 @@
+/**
+ * ============================================
+ * BANCAMOBILE DEMO - ESTILOS PRINCIPALES
+ * ============================================
+ * 
+ * Hoja de estilos principal para la aplicación BancaMobile Demo
+ * con temática especial de San Valentín.
+ * 
+ * @author alemcuevas
+ * @version 1.0.0
+ * @license MIT
+ * 
+ * ============================================
+ * ÍNDICE DE CONTENIDOS
+ * ============================================
+ * 
+ * 1. VARIABLES CSS (Custom Properties)
+ *    - Colores primarios, secundarios y de acento
+ *    - Colores de estado (success, danger, warning)
+ *    - Colores de fondo y texto
+ *    - Gradientes decorativos
+ *    - Sombras (sm, default, lg, xl)
+ *    - Border radius
+ *    - Transiciones
+ * 
+ * 2. RESET Y ESTILOS BASE
+ *    - Reset de márgenes y padding
+ *    - Box-sizing border-box global
+ *    - Scroll behavior smooth
+ *    - Estilos base del body
+ *    - Contenedor principal responsive
+ * 
+ * 3. HEADER Y NAVEGACIÓN
+ *    - Header fijo con efecto glassmorphism
+ *    - Logo con icono y texto
+ *    - Navegación horizontal con estados hover/active
+ *    - Menú hamburguesa para móviles
+ * 
+ * 4. SISTEMA DE BOTONES
+ *    - .btn: Estilos base
+ *    - .btn-primary: Botón con gradiente y sombra
+ *    - .btn-outline: Botón con borde
+ *    - .btn-full: Botón de ancho completo
+ * 
+ * 5. HERO SECTION
+ *    - Layout de dos columnas con grid
+ *    - Formas decorativas animadas (blur shapes)
+ *    - Animación float para elementos de fondo
+ *    - Estadísticas destacadas
+ *    - Indicador de scroll animado
+ * 
+ * 6. CARD PREVIEW (Tarjeta 3D)
+ *    - Efecto de perspectiva 3D
+ *    - Animación de flotación
+ *    - Chip dorado con gradiente
+ *    - Información de tarjeta estilizada
+ * 
+ * 7. ELEMENTOS DECORATIVOS SAN VALENTÍN
+ *    - .valentine-badge: Etiqueta promocional
+ *    - .floating-hearts: Corazones flotantes animados
+ *    - Animaciones pulse y heartPulse
+ * 
+ * 8. COUNTDOWN SECTION
+ *    - Temporizador con diseño de tarjetas
+ *    - Fondo con gradiente oscuro
+ *    - Separadores con corazones animados
+ *    - Promoción destacada con efecto glow
+ *    - Corazones decorativos de fondo
+ * 
+ * 9. VALENTINE BANNER
+ *    - Banner promocional con gradiente
+ *    - Efecto de borde brillante
+ *    - Corazones animados con drift
+ *    - Layout flexible para contenido
+ * 
+ * 10. SECCIONES GENERALES
+ *     - .section: Padding estándar
+ *     - .section-header: Encabezados centrados
+ *     - .section-tag: Etiquetas de sección
+ *     - .section-title: Títulos responsivos con clamp()
+ * 
+ * 11. SERVICIOS
+ *     - Grid responsive de tarjetas
+ *     - Efectos hover con elevación
+ *     - Iconos con gradiente
+ *     - Tarjetas promocionales especiales
+ * 
+ * 12. NOSOTROS
+ *     - Layout de dos columnas
+ *     - Lista de características con iconos
+ *     - Grid de imágenes decorativas
+ *     - Patrones SVG de fondo
+ * 
+ * 13. TESTIMONIOS
+ *     - Slider de testimonios
+ *     - Tarjetas con efecto glassmorphism
+ *     - Puntos de navegación interactivos
+ *     - Animación fadeIn para transiciones
+ * 
+ * 14. CONTACTO
+ *     - Layout de dos columnas
+ *     - Información de contacto con iconos
+ *     - Formulario con validación visual
+ *     - Estados focus personalizados
+ * 
+ * 15. FOOTER
+ *     - Grid de contenido
+ *     - Enlaces sociales con hover
+ *     - Columnas de enlaces
+ *     - Copyright
+ * 
+ * 16. RESPONSIVE DESIGN
+ *     - Breakpoint 1024px: Tablets
+ *     - Breakpoint 768px: Móviles
+ *     - Reorganización de layouts
+ *     - Menú móvil animado
+ * 
+ * ============================================
+ * ANIMACIONES DEFINIDAS
+ * ============================================
+ * 
+ * @keyframes float        - Movimiento suave de elementos de fondo
+ * @keyframes cardFloat    - Flotación de la tarjeta 3D
+ * @keyframes pulse        - Efecto de pulso para badges
+ * @keyframes floatHeart   - Corazones ascendentes
+ * @keyframes heartBeat    - Latido de corazón
+ * @keyframes heartPulse   - Pulso individual de corazón
+ * @keyframes glowPulse    - Efecto de brillo en promociones
+ * @keyframes bounce       - Rebote para indicadores
+ * @keyframes bounce2      - Rebote alternativo
+ * @keyframes floatSlow    - Flotación lenta de fondo
+ * @keyframes heartDrift   - Movimiento suave de corazones
+ * @keyframes fadeIn       - Aparición gradual
+ * 
+ * ============================================
+ * PALETA DE COLORES (San Valentín)
+ * ============================================
+ * 
+ * Primario:     #e11d48 (Rosa intenso)
+ * Primario oscuro: #be123c
+ * Primario claro: #fb7185
+ * Secundario:   #831843 (Borgoña)
+ * Acento:       #f472b6 (Rosa suave)
+ * Éxito:        #10b981 (Verde)
+ * Peligro:      #ef4444 (Rojo)
+ * Advertencia:  #f59e0b (Naranja)
+ * Fondo:        #fff1f2 (Rosa muy claro)
+ * 
+ * ============================================
+ * DEPENDENCIAS
+ * ============================================
+ * 
+ * - Fuentes: Segoe UI, -apple-system, BlinkMacSystemFont, Roboto
+ * - Soporte para backdrop-filter (navegadores modernos)
+ * - CSS Grid y Flexbox
+ * - CSS Custom Properties (Variables)
+ * - CSS clamp() para tipografía fluida
+ * 
+ * ============================================
+ */
 /* Variables CSS - Temática San Valentín */
 :root {
     --primary-color: #e11d48;

@@ -20,6 +20,16 @@ BancaMobile es una aplicación web demo que permite a los usuarios realizar oper
 - CSS3
 - JavaScript
 
+## Pre-requisitos
+
+- Navegador web moderno (Chrome, Firefox, Edge, Safari)
+- Conexión a internet (para cargar recursos externos)
+
+## Pre-requisitos de desarrollo
+
+- Editor de código (Visual Studio Code, Sublime Text, etc.)
+- Git (opcional, para clonar el repositorio)
+
 ## Instalación
 
 1. Clona el repositorio:

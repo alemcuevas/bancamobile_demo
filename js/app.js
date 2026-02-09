@@ -38,6 +38,9 @@ function updateCountdown() {
         // San Valentín ya pasó o es hoy
         daysEl.textContent = '00';
         hoursEl.textContent = '00';
+        /**
+         * Actualiza el contador regresivo y muestra mensajes según la cercanía a San Valentín.
+         */
         minutesEl.textContent = '00';
         secondsEl.textContent = '00';
         messageEl.innerHTML = '💕 ¡Feliz San Valentín! 💕 <br><small>Las promociones están activas todo el día</small>';
@@ -80,6 +83,9 @@ function updateDailyPromo() {
         // Si no es febrero, mostrar promo genérica o del día 14
         promoEl.textContent = "🎉 ¡Próximamente! Promociones especiales de San Valentín";
     }
+        /**
+         * Selecciona la promoción diaria en función de la fecha del sistema.
+         */
 }
 
 // Iniciar countdown
@@ -100,6 +106,9 @@ window.addEventListener('scroll', () => {
     
     if (currentScroll > 50) {
         header.classList.add('scrolled');
+        /**
+         * Marca como activo el enlace de navegación correspondiente a la sección visible.
+         */
     } else {
         header.classList.remove('scrolled');
     }
@@ -120,6 +129,11 @@ menuToggle.addEventListener('click', () => {
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         menuToggle.classList.remove('active');
+        /**
+         * Anima los contadores numéricos del hero.
+         * @param {HTMLElement} element - Nodo DOM que se actualizará.
+         * @param {number} target - Valor final deseado.
+         */
         nav.classList.remove('active');
     });
 });
@@ -142,6 +156,9 @@ function updateActiveNav() {
                 if (link.getAttribute('href') === `#${sectionId}`) {
                     link.classList.add('active');
                 }
+        /**
+         * Observa las secciones clave para disparar animaciones al entrar en viewport.
+         */
             });
         }
     });
@@ -162,6 +179,10 @@ function animateCounter(element, target) {
             clearInterval(timer);
             current = target;
         }
+        /**
+         * Muestra una tarjeta de testimonio específica y sincroniza los indicadores.
+         * @param {number} index - Índice del testimonio a mostrar.
+         */
         
         if (target >= 1000) {
             element.textContent = Math.floor(current).toLocaleString('es-MX');
@@ -173,20 +194,32 @@ function animateCounter(element, target) {
 
 // Intersection Observer for animations
 const observerOptions = {
+        /**
+         * Avanza automáticamente al siguiente testimonio.
+         */
     threshold: 0.2,
     rootMargin: '0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
+        /**
+         * Inicia el carrusel automático de testimonios.
+         */
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animate');
             
+        /**
+         * Detiene el carrusel automático de testimonios.
+         */
             // Animate counters when hero section is visible
             if (entry.target.classList.contains('hero')) {
                 const counters = entry.target.querySelectorAll('.stat-number');
                 counters.forEach(counter => {
                     const target = parseInt(counter.dataset.target);
+        /**
+         * Gestiona el envío falso del formulario de contacto para mostrar feedback al usuario.
+         */
                     animateCounter(counter, target);
                 });
             }
@@ -214,6 +247,11 @@ function showTestimonio(index) {
     });
     
     testimonioCards[index].classList.add('active');
+        /**
+         * Crea y muestra una notificación flotante con auto cierre.
+         * @param {string} title - Título del mensaje.
+         * @param {string} message - Cuerpo descriptivo.
+         */
     dots[index].classList.add('active');
     currentTestimonio = index;
 }
@@ -336,6 +374,9 @@ function showNotification(title, message) {
     
     text.querySelector('p').style.cssText = `
         color: #64748b;
+        /**
+         * Aplica desplazamiento suave al navegar por anclas internas.
+         */
         font-size: 14px;
         margin: 0;
     `;
